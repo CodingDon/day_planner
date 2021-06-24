@@ -1,5 +1,11 @@
-var timeBlock = document.querySelectorAll("row time-block red");
+var timeDisplayEl = $('#time-display');
 
-for (var i = 0; i < timeBlock.length; i++) {
-timeBlock[i].setAttribute("style", "color: red")
+
+
+
+
+function displayTime() {
+ var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+ timeDisplayEl.text(rightNow);
 }
+setInterval(displayTime, 1000);
