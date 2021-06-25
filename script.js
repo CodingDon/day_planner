@@ -32,8 +32,8 @@ function colorizer() {
 // set eventListner on saveBtn to set items on local storage.
 $(".saveBtn").click(function(){
   // grab DOM elements for storage.
-  var hourSection = $(this).siblings(".hour")
-  var textEntry = $(this).siblings(".description")
+  var hourSection = $(this).siblings(".hour").text()
+  var textEntry = $(this).siblings(".description").val()
   // setting the hour as the key and the text as the value.
   localStorage.setItem(hourSection, textEntry)
 })
